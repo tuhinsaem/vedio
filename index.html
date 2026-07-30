@@ -53,6 +53,162 @@ color:white;
 </button>
 
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Library</title>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:#111;
+font-family:Arial,sans-serif;
+color:#fff;
+}
+header{
+background:#000;
+padding:15px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#ff3333;
+}
+.search{
+padding:15px;
+text-align:center;
+}
+.search input{
+width:90%;
+max-width:500px;
+padding:12px;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:20px;
+}
+.card{
+background:#1b1b1b;
+border-radius:12px;
+overflow:hidden;
+transition:.3s;
+}
+.card:hover{
+transform:scale(1.03);
+}
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+.card h3{
+padding:10px;
+}
+.card button{
+width:90%;
+margin:10px auto 15px;
+display:block;
+padding:12px;
+background:#00c853;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+footer{
+text-align:center;
+padding:20px;
+color:#888;
+}
+
+/* Adsterra Script এখানে বসাতে পারবেন */
+</style>
+</head>
+
+<body>
+
+<header>🎬 Video Library</header>
+
+<div class="search">
+<input type="text" id="search" placeholder="Search video...">
+</div>
+
+<div class="grid" id="videos">
+
+<div class="card">
+<img src="https://picsum.photos/300/420?1">
+<h3>Video 1</h3>
+<button onclick="alert('Replace this with your own valid video link.')">
+Get Link
+</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/420?2">
+<h3>Video 2</h3>
+<button onclick="alert('Replace this with your own valid video link.')">
+Get Link
+</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/420?3">
+<h3>Video 3</h3>
+<button onclick="alert('Replace this with your own valid video link.')">
+Get Link
+</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/420?4">
+<h3>Video 4</h3>
+<button onclick="alert('Replace this with your own valid video link.')">
+Get Link
+</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/420?5">
+<h3>Video 5</h3>
+<button onclick="alert('Replace this with your own valid video link.')">
+Get Link
+</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/420?6">
+<h3>Video 6</h3>
+<button onclick="alert('Replace this with your own valid video link.')">
+Get Link
+</button>
+</div>
+
+</div>
+
+<footer>
+© 2026 Video Library
+</footer>
+
+<script>
+const search=document.getElementById("search");
+search.addEventListener("keyup",()=>{
+let value=search.value.toLowerCase();
+document.querySelectorAll(".card").forEach(card=>{
+card.style.display=
+card.innerText.toLowerCase().includes(value)
+?"block":"none";
+});
+});
+</script>
+
+</body>
+</html>
 </body>
 </html>
